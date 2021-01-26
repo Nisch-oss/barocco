@@ -1,0 +1,71 @@
+!DOCTYPE html
+html lang=en
+  head
+    title&lt;model-viewer&gt; exampletitle
+    meta charset=utf-8
+    meta http-equiv=X-UA-Compatible content=IE=edge
+    meta name=viewport content=width=device-width, initial-scale=1
+
+    link rel=stylesheet href=demo-styles.css
+    
+    !-- The following libraries and polyfills are recommended to maximize browser support --
+    !-- NOTE you must adjust the paths as appropriate for your project --
+    
+    !-- 🚨 REQUIRED Web Components polyfill to support Edge and Firefox  63 --
+    script src=httpsunpkg.com@webcomponentswebcomponentsjs@2.1.3webcomponents-loader.jsscript
+
+    !-- 💁 OPTIONAL Intersection Observer polyfill for better performance in Safari and IE11 --
+    script src=httpsunpkg.comintersection-observer@0.5.1intersection-observer.jsscript
+
+    !-- 💁 OPTIONAL Resize Observer polyfill improves resize behavior in non-Chrome browsers --
+    script src=httpsunpkg.comresize-observer-polyfill@1.5.0distResizeObserver.jsscript
+
+    !-- 💁 OPTIONAL Fullscreen polyfill is needed to fully support AR features --
+    script src=httpsunpkg.comfullscreen-polyfill@1.0.2distfullscreen.polyfill.jsscript
+
+    !-- 💁 OPTIONAL Include prismatic.js for Magic Leap support --
+    script src=httpsunpkg.com@magicleapprismaticprismatic.min.jsscript
+    
+    !-- 💁 OPTIONAL The focus-visible polyfill removes the focus ring for some input types --
+    script src=httpsunpkg.comfocus-visible@5.0.2distfocus-visible.js deferscript
+
+  head 
+body
+  div id=card
+    !-- All you need to put beautiful, interactive 3D content on your site --
+    model-viewer src=andrea_pozzo/andrea_pozzo.glb
+                  ios-src=andrea_pozzo/andrea_pozzo.usdz
+                  alt=Estasi di Santa Teresa
+                  shadow-intensity=1
+                  camera-controls
+                  interaction-prompt=auto
+                  auto-rotate ar magic-leap
+    model-viewer
+    section class=attribution
+      span
+        h1La Dea Madreh1
+        spana href=httpswww.itisothoca.edu.it target=_blankOthocaaspan
+      span
+      a class=cc href=httpscreativecommons.orglicensesby2.0 target=_blank
+        img src=httpsmirrors.creativecommons.orgpresskiticonscc.svg
+        img src=httpsmirrors.creativecommons.orgpresskiticonsby.svg
+      a
+    section
+    
+  div
+  
+  
+  
+  !-- 💁 Include both scripts below to support all browsers! --
+
+  !-- Loads model-viewer for modern browsers --
+  script type=module
+      src=httpsunpkg.com@googlemodel-viewerdistmodel-viewer.js
+  script
+
+  !-- Loads model-viewer for old browsers like IE11 --
+  script nomodule
+      src=httpsunpkg.com@googlemodel-viewerdistmodel-viewer-legacy.js
+  script
+body
+html
